@@ -34,6 +34,9 @@ header {
     padding: 1rem 0;
     border-bottom: 3px solid var(--primary-pink);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header .container {
@@ -165,6 +168,56 @@ header nav a:hover {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
+
+
+/* === GAYA GALERI FOTO BARU === */
+.gallery-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Membuat grid responsif: 2 kolom di hp, 5 di desktop */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden; /* Memastikan gambar tidak keluar dari kotak */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--footer-bg);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Menyamakan tinggi semua gambar */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    display: block;
+}
+
+.gallery-item figcaption {
+    padding: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+    background-color: var(--footer-bg); /* Latar pink sangat muda */
+}
+
+/* ================================ */
+
 
 /* Footer */
 footer {
